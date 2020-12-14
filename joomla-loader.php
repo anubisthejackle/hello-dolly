@@ -19,5 +19,6 @@ if( defined('_JEXEC') ){
     };
     
     $hello = new \HelloDolly\HelloDolly($texturizer, $translator);
+    require JModuleHelper::getLayoutPath('mod_hellodolly');
 
 }
