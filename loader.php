@@ -5,7 +5,6 @@ Description: This plugin is based on the Hello Dolly plugin by Matt Mullenweg
 Author: Travis Weston, Matt Mullenweg
 Version: 2.0.0
 */
-
 if(defined('WPINC')){
 
     $texturizer = function($line) {
@@ -21,4 +20,21 @@ if(defined('WPINC')){
     $hello = new \HelloDolly\HelloDolly($texturizer, $translator);
     (new \WordPress\DisplayDriver($hello))->register();
     
+}
+
+if( defined('_JEXEC') ){
+
+    require_once( __DIR__ . '/HelloDolly/hello.php' );
+    
+    $texturizer = function($line) {
+        return $line;
+    };
+    
+    $translator = function($line) {
+        return $line;
+    };
+    
+    $hello = new \HelloDolly\HelloDolly($texturizer, $translator);
+    require JModuleHelper::getLayoutPath('mod_hellodolly');
+
 }
