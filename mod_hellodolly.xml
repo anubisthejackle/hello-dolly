@@ -6,7 +6,7 @@
     <description>Hello Dolly (Redux) Port for Joomla!</description>
     <files>
         <filename>mod_hellodolly.xml</filename>
-        <filename module="mod_hellodolly">loader.php</filename>
+        <filename module="mod_hellodolly">mod_hellodolly.php</filename>
         <filename>HelloDolly/hello.php</filename>
         <filename>tmpl/default.php</filename>
     </files>
