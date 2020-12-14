@@ -20,10 +20,12 @@ class HelloDolly {
 		if ( 'en_' !== substr( $locale, 0, 3 ) ) {
 			$lang = ' lang="en"';
 		}
+
+		$translator = $this->_translator;
 	
 		printf(
 			'<p id="dolly"><span class="screen-reader-text">%s </span><span dir="ltr"%s>%s</span></p>',
-			$this->_translator( 'Quote from Hello Dolly song, by Jerry Herman:' ),
+			$translator( 'Quote from Hello Dolly song, by Jerry Herman:' ),
 			$lang,
 			$chosen
 		);
@@ -63,7 +65,8 @@ class HelloDolly {
 		];
 	
 		$line = $lyrics[ array_rand($lyrics) ];
-		return $this->_texturizer( $line );
+		$texturizer = $this->_texturizer;
+		return $texturizer( $line );
 	}
 
 	public function printCss() {

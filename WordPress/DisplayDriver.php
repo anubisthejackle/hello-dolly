@@ -23,7 +23,7 @@ class DisplayDriver implements DisplayDriverInterface {
     }
 
     public function register() {
-        add_action( 'admin_notices', [$this->_hello, 'printProxy'] );
+        add_action( 'admin_notices', [$this, 'printProxy'] );
         add_action( 'admin_head', [$this->_hello, 'printCss'] );
     }
 
