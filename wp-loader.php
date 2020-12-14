@@ -20,4 +20,5 @@ if(defined('WPINC')){
     require_once( __DIR__ . '/WordPress/DisplayDriver.php');
     $hello = new \HelloDolly\HelloDolly($texturizer, $translator);
     (new \WordPress\DisplayDriver($hello))->register();
+    
 }

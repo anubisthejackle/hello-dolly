@@ -6,9 +6,8 @@ require_once( dirname( __DIR__ ) . '/HelloDolly/hello.php' );
 require_once( dirname( __DIR__ ) . '/Interfaces/DisplayDriverInterface.php' );
 
 use HelloDolly\HelloDolly;
-use Interfaces\DisplayDriverInterface;
 
-class DisplayDriver implements DisplayDriverInterface {
+class DisplayDriver {
 
     private $_hello;
 

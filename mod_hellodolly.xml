@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Hello Dolly</name>
+    <author>Travis Weston</author>
+    <version>2.0.0</version>
+    <description>Hello Dolly (Redux) Port for Joomla!</description>
+    <files>
+        <filename>mod_hellodolly.xml</filename>
+        <filename module="mod_hellodolly">joomla-loader.php</filename>
+        <filename>HelloDolly/hello.php</filename>
+    </files>
+    <config>
+    </config>
+</extension>
